@@ -141,7 +141,7 @@ input:focus {
 .submits {
     width: 48%;
     display: inline-block;
-    float: left;
+    /* float: left; */
     margin-left: 2%;
 }
 

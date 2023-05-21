@@ -4,6 +4,7 @@ function kiemTraRong(checkInput, idThongBao) {
         document.getElementById(idThongBao).innerHTML = "";
         return true;
     } else {
+        document.getElementById(idThongBao).style = "display: inline";
         document.getElementById(idThongBao).innerHTML = "Vui lòng nhập dữ liệu";
         return false;
     }

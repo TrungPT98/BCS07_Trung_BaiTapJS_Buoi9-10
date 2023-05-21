@@ -81,6 +81,7 @@ function editNhanVien(taiKhoan) {
 
 function clearThongTin() {
     document.getElementById("tknv").readOnly = false;
+    // document.querySelectorAll("sp-thongbao").style = "display: none";
     ganGiaTriChoInput("", "", "", "", "", "", "", "");
 }
 
