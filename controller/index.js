@@ -81,6 +81,7 @@ function editNhanVien(taiKhoan) {
 
 function clearThongTin() {
     document.getElementById("tknv").readOnly = false;
+    document.getElementById('btnThemNV').disabled = false;
     // document.querySelectorAll("sp-thongbao").style = "display: none";
     ganGiaTriChoInput("", "", "", "", "", "", "", "");
 }
@@ -92,5 +93,6 @@ function capNhatThongTinNV() {
     // console.log(index);
     arrNhanVien[index] = nhanVienDaSua;
     saveStorage(arrNhanVien);
+    alert("Đã cập nhật");
     renderGiaoDien();
 }
