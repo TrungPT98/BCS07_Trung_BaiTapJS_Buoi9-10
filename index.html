@@ -126,9 +126,10 @@
 								<div class="input-group">
 									<input type="text" class="form-control" placeholder="Loại nhân viên" id="searchName">
 									<div class="input-group-prepend">
-										<span class="input-group-text btn" id="btnTimNV"><i class="fa fa-search"></i></span>
+										<span class="input-group-text btn" id="btnTimNV" onclick="timLoaiNhanVien()"><i class="fa fa-search"></i></span>
 									</div>
 								</div>
+								<p id="tenDaXepLoai" class="py-2 text-left m-0"></p>
 							</div>
 						</div>
 						<table class="table table-bordered table-hover myTable">
@@ -240,7 +241,7 @@
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-calendar"></i></span>
 								</div>
-								<input type="date" name="ngaylam" id="datepicker" class="form-control"
+								<input type="text" name="ngaylam" id="datepicker" class="form-control"
 									placeholder="Ngày làm">
 							</div>
 

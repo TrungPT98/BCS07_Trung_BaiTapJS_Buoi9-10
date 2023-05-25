@@ -50,9 +50,9 @@ function NhanVien(
         var xepLoai = "";
         if (this.gioLam >= 192 && chucVuCT == "Nhân viên") {
             xepLoai = "Nhân viên xuất sắc";
-        } else if (this.gioLam >= 176 && chucVuCT == "Nhân viên") {
+        } else if (this.gioLam < 192 && this.gioLam >= 176 && chucVuCT == "Nhân viên") {
             xepLoai = "Nhân viên giỏi";
-        } else if (this.gioLam >= 160 && chucVuCT == "Nhân viên") {
+        } else if (this.gioLam < 176 && this.gioLam >= 160 && chucVuCT == "Nhân viên") {
             xepLoai = "Nhân viên khá";
         } else if (this.gioLam < 160 && chucVuCT == "Nhân viên") {
             xepLoai = "Nhân viên trung bình";

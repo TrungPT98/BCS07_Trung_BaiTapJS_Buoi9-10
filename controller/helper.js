@@ -19,6 +19,14 @@ function layGiaTriInput() {
   kiemTraRong(_chucVu, "tbChucVu") & 
   kiemTraRong(_gioLam, "tbGiolam");
 
+  valid &= kiemTraTaiKhoan(_taiKhoan, "tbTKNV");
+  valid &= kiemTraEmail(_email, "tbEmail");
+  valid &= kiemTraPassword(_matKhau, "tbMatKhau");
+  valid &= kiemTraDinhDangNgay(_ngayLam, "tbNgay");
+  valid &= kiemTraLuong(_luongCB, "tbLuongCB");
+  valid &= kiemTraChucVu(_chucVu, "tbChucVu");
+  valid &= kiemTraGioLam(_gioLam, "tbGiolam");
+
   if (!valid) {
     return;
   }

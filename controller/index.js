@@ -96,3 +96,47 @@ function capNhatThongTinNV() {
     alert("Đã cập nhật");
     renderGiaoDien();
 }
+
+function timLoaiNhanVien () {
+    var nguoiDungNhap = document.getElementById('searchName').value;
+    // console.log(nguoiDungNhap);
+    var nhanVien = arrNhanVien;
+    // console.log(nhanVien);
+    for (var i=1; i < arrNhanVien.length; i++) {
+        var loaiNhanVien = "";
+        if (nguoiDungNhap == "Nhân viên xuất sắc") {
+            // console.log("đúng");
+            nhanVien.forEach(function (item, index) {
+                if (item.gioLam >= 192 && item.chucVu == 3) {
+                    loaiNhanVien += item.hoTen + `<br>`;
+                    // console.log(loaiNhanVien);
+                } 
+            });
+        } else if (nguoiDungNhap == "Nhân viên giỏi") {
+            // console.log("đúng");
+            nhanVien.forEach(function (item, index) {
+                if (item.gioLam < 192 && item.gioLam >= 176 && item.chucVu == 3) {
+                    loaiNhanVien += item.hoTen + `<br>`;
+                    // console.log(loaiNhanVien);
+                }
+            });
+        } else if (nguoiDungNhap == "Nhân viên khá") {
+            // console.log("đúng");
+            nhanVien.forEach(function (item, index) {
+                if (item.gioLam < 176 && item.gioLam >= 160 && item.chucVu == 3) {
+                    loaiNhanVien += item.hoTen + `<br>`;
+                    // console.log(loaiNhanVien);
+                }
+            });
+        } else if (nguoiDungNhap == "Nhân viên trung bình") {
+            // console.log("đúng");
+            nhanVien.forEach(function (item, index) {
+                if (item.gioLam < 160 && item.chucVu == 3) {
+                    loaiNhanVien += item.hoTen + `<br>`;
+                    // console.log(loaiNhanVien);
+                }
+            });
+        }
+    }
+    document.getElementById('tenDaXepLoai').innerHTML = loaiNhanVien;
+}
